@@ -1,31 +1,30 @@
 <template>
   <div class="home">
-    <!-- 顶部图片 -->
     <img src="../../assets/images/top.png" width="100%" alt="">
     <CovInfo :covDesc='covDesc' :news='news' />
-    <div class="box">
+    <div class="list">
         <div>
-          
+          <router-link to="/area">
             <img src="../../assets/images/wen.png" width="56px" alt="">
-            <h5>免费问诊</h5>
-          
+            <div>风险地区</div>
+          </router-link>
         </div>
         <div>
           <router-link to="/hesuan">
             <img src="../../assets/images/hesuan.png" width="56px" alt="">
-            <h5>核酸检测</h5>
+            <div>核酸检测</div>
           </router-link>
         </div>
         <div>
           <img src="../../assets/images/wuzi.png" width="56px" alt="">
-          <h5>医疗物资</h5>
+          <div>医疗物资</div>
         </div>
         <div>
           <img src="../../assets/images/chuxing.png" width="56px" alt="">
-          <h5>出行政策</h5>
+          <div>出行政策</div>
         </div>
     </div>
-    <CovData></CovData>
+    <CovData :covData='covData' />
   </div>
 </template>
 
@@ -39,7 +38,8 @@ export default {
   data() {
     return {
       covDesc: {},
-      news: []
+      news: [],
+      covData: {}
     }
   },
   components: {
@@ -62,26 +62,41 @@ export default {
       }
       //疫情热点
       this.news = res.data.newslist[0].news;
-      console.log(this.news);
+      //全国疫情数据统计信息
+      this.covData = {
+        currentConfirmedCount: data.currentConfirmedCount,  //现存确诊人数
+        confirmedCount: data.confirmedCount,        //	累计确诊人数
+        suspectedCount: data.suspectedCount,        //	累计境外输入人数
+        curedCount: data.curedCount,              //累计治愈人数
+        deadCount: data.deadCount,                //累计死亡人数
+        seriousCount: data.seriousCount,         //现存无症状人数
+        suspectedIncr: data.suspectedIncr,        //新增境外输入人数
+        currentConfirmedIncr: data.currentConfirmedIncr,        //相比昨天现存确诊人数
+        confirmedIncr: data.confirmedIncr,          //	相比昨天累计确诊人数
+        curedIncr: data.curedIncr,                //	相比昨天新增治愈人数
+        deadIncr: data.deadIncr,                //相比昨天新增死亡人数
+        seriousIncr: data.seriousIncr,          //相比昨天现存无症状人数
+        modifyTime: data.modifyTime,            //时间
+        yesterdaySuspectedCountIncr: data.yesterdaySuspectedCountIncr  //相比昨天境外输入确诊人数
+      }
     })
   }
 }
 </script>
 
-<style lang="less" scoped>
-.box {
-  display: flex;
-  justify-content: space-between;
-  border-bottom: 0.5px solid ;
-  // margin-bottom: 5px;
-  padding-bottom: 5px;
-  color: #666;
-  div {
-    margin: 0 15px;
-    h5 {
-    text-align: center;
-    }
-  }  
-}
 
+<style lang="less" scoped>
+.list {
+  display: flex;
+  padding-bottom: 0.2rem;
+  > div {
+    flex: 1;
+    text-align: center;
+    color: #666;
+    img {
+      width: 0.8rem;
+      height: 0.8rem;
+    }
+  }
+}
 </style>

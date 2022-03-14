@@ -3,6 +3,7 @@ import VueRouter from 'vue-router'
 import Home from '../views/Home/Home.vue'
 
 const Hesuan = () => import('../views/Hesuan/index.vue')
+const Area = () => import('../views/Area/index.vue')
 
 Vue.use(VueRouter)
 
@@ -16,6 +17,11 @@ const routes = [
     path: '/hesuan',
     name: 'Hesuan',
     component: Hesuan
+  },
+  {
+    path: '/area',
+    name: 'Area',
+    component: Area
   }
 ]
 
