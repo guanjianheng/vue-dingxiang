@@ -26,13 +26,17 @@
           <div>出行政策</div>
         </div>
     </div>
+    <!-- 疫情数据 -->
     <CovData :covData='covData' />
+    <!-- 地图 -->
+    <ChinaMap />
   </div>
 </template>
 
 <script>
 import CovInfo from './CovInfo/CovInfo.vue'
 import CovData from './CovInfo/CovData.vue'
+import ChinaMap from './Echarts/ChinaMap.vue'
 import api from '../../api/index'
 
 export default {
@@ -46,7 +50,8 @@ export default {
   },
   components: {
     CovInfo,
-    CovData
+    CovData,
+    ChinaMap
   },
   created() {
     api.getCovInfo()
