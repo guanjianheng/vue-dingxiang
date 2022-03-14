@@ -16,8 +16,10 @@
           </router-link>
         </div>
         <div>
-          <img src="../../assets/images/wuzi.png" width="56px" alt="">
-          <div>医疗物资</div>
+          <router-link to="/prevention">
+            <img src="../../assets/images/wuzi.png" width="56px" alt="">
+            <div>医疗物资</div>
+          </router-link>
         </div>
         <div>
           <img src="../../assets/images/chuxing.png" width="56px" alt="">
