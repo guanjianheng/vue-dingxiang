@@ -11,7 +11,7 @@
         </div>
         <div class="hot">
             <h3 class="title">
-                <img src="../../assets/images/hot.jpg" width="60px" alt="">
+                <img src="../../../assets/images/hot.jpg" width="60px" alt="">
             </h3>
             <ul>
                 <li v-for="item in news" :key="item.id">
@@ -44,6 +44,12 @@ export default {
 <style lang="less" scoped>
 .info {
     padding: 0.2rem;
+    .cov ,.hot {
+        border-bottom: 0.5px solid ;
+        margin-bottom: 5px;
+        padding-bottom: 5px;
+        color: #666;
+    }  
     .title {
         border-left: 0.1rem solid rgb(20, 49, 128);
         padding-left: 0.1rem;
