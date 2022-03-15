@@ -5,6 +5,7 @@ import Home from '../views/Home/Home.vue'
 const Hesuan = () => import('../views/Hesuan/index.vue')
 const Area = () => import('../views/Area/index.vue')
 const Prevention = () => import('../views/Prevention/index.vue')
+const Citys = () => import('../views/Citys/Citys.vue')
 
 Vue.use(VueRouter)
 
@@ -28,6 +29,12 @@ const routes = [
     path: '/prevention',
     name: 'Prevention',
     component: Prevention
+  },
+  {
+    path: '/citys/:cityname',
+    name: 'Citys',
+    component: Citys,
+    props: true,
   }
 ]
 
