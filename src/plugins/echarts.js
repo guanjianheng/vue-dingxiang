@@ -6,7 +6,7 @@ const install = function(Vue, options) {
         $myChart: {
             get() {
                 return {
-                    chinaMap(id) {
+                    chinaMap(id, arr) {
                         var myChart = echarts.init(document.getElementById(id));
                         var option = {
                             tooltip: { //悬浮弹框
@@ -96,7 +96,7 @@ const install = function(Vue, options) {
                                         borderWidth: 0,
                                     }
                                 },
-                                data: []
+                                data:arr
                                 // data: [
                                 //     { name: '内蒙古', value: 200 },
                                 //     { name: '北京', value: 800 },

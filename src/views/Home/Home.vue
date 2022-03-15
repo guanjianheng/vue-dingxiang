@@ -56,7 +56,7 @@ export default {
   created() {
     api.getCovInfo()
     .then(res => {
-      console.log(res.data);
+      console.log('获取疫情数据', res.data);
       //病毒信息介绍
       let data = res.data.newslist[0].desc;
       this.covDesc = {
