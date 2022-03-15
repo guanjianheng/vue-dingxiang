@@ -9,7 +9,11 @@ const api = {
         //获取国内疫情数据
     getChinaData() {
         return axios.get(base.baseUrl + base.chinaData)
-    }
+    },
+        //获取世界疫情数据
+    getWorldData() {
+        return axios.get(base.baseUrl + base.worldData)
+    }    
 }
 
 export default api 

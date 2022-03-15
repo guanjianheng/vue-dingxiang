@@ -28,8 +28,10 @@
     </div>
     <!-- 疫情数据 -->
     <CovData :covData='covData' />
-    <!-- 地图 -->
+    <!-- 中国地图 -->
     <ChinaMap />
+    <!-- 世界地图 -->
+    <WorldMap />
   </div>
 </template>
 
@@ -37,6 +39,8 @@
 import CovInfo from './CovInfo/CovInfo.vue'
 import CovData from './CovInfo/CovData.vue'
 import ChinaMap from './Echarts/ChinaMap.vue'
+import WorldMap from './Echarts/WorldMap.vue'
+
 import api from '../../api/index'
 
 export default {
@@ -51,7 +55,8 @@ export default {
   components: {
     CovInfo,
     CovData,
-    ChinaMap
+    ChinaMap,
+    WorldMap
   },
   created() {
     api.getCovInfo()
@@ -96,7 +101,7 @@ export default {
 .list {
   display: flex;
   padding-bottom: 0.2rem;
-  > div {
+   div {
     flex: 1;
     text-align: center;
     color: #666;

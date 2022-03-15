@@ -5,6 +5,7 @@ import './assets/css/base.css'
 import './assets/js/phone'
 import './plugins/vant'
 
+
 import echarts from './plugins/echarts'
 Vue.use(echarts)
 
