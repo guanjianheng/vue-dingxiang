@@ -56,8 +56,9 @@ export default {
 
 <style lang="less" scoped>
 .data {
-  background: #f5f5f5;
+  // background: #f5f5f5;
   padding-top: 0.3rem;
+  border-bottom: 0.2rem solid #f5f5f5;
   .content {
       background-color: #fff;
       border-radius: 0.2rem;

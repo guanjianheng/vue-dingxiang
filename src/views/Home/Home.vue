@@ -32,8 +32,6 @@
     <ChinaMap />
     <!-- 世界地图 -->
     <WorldMap />
-    <!-- 轮播图 -->
-    <Swiper />
   </div>
 </template>
 
@@ -42,7 +40,6 @@ import CovInfo from './CovInfo/CovInfo.vue'
 import CovData from './CovInfo/CovData.vue'
 import ChinaMap from './Echarts/ChinaMap.vue'
 import WorldMap from './Echarts/WorldMap.vue'
-// import Swiper from './Swiper/Swiper.vue'
 
 import api from '../../api/index'
 
@@ -104,6 +101,9 @@ export default {
 .list {
   display: flex;
   padding-bottom: 0.2rem;
+  border-bottom: 0.2rem solid #f5f5f5;
+  border-top: 0.2rem solid #f5f5f5;
+
    div {
     flex: 1;
     text-align: center;

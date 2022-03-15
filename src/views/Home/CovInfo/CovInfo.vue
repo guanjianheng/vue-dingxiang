@@ -53,7 +53,7 @@ export default {
 <style lang="less" scoped>
 .info {
   padding: 0.2rem;
-  .title {
+      .title {
     margin-bottom: 0.2rem;
     font-size: 0.3rem;
     font-weight: bold;
@@ -68,6 +68,7 @@ export default {
       }
     }
   }
+
   .title::before {
     content: "";
     border-left: 0.1rem solid rgb(9, 60, 202);

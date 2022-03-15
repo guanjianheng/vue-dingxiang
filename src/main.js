@@ -4,10 +4,6 @@ import router from './router'
 import './assets/css/base.css'
 import './assets/js/phone'
 
-// import VueAwesomeSwiper from 'vue-awesome-swiper'
-// import 'swiper/css/swiper.css'
-// Vue.use(VueAwesomeSwiper)
-
 import echarts from './plugins/echarts'
 Vue.use(echarts)
 
