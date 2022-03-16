@@ -8,7 +8,7 @@
       <!-- 累计确诊 -->
       <div v-show="leftShow"  id="main" style="width: 7.5rem; height: 6rem"></div>       
       <!-- 现存确诊 -->
-      <div v-show="rightShow"  id="nowMain" style="width: 7.5rem; height: 6rem"></div>       
+      <div v-show="rightShow"  id="nowMain" style="width: 7.5rem; height: 6rem"></div>    
   </div>
 </template>
 
@@ -19,7 +19,7 @@ export default {
     data() {
         return {
             leftShow: true,
-            rightShow: false
+            rightShow: false,
         }
     },
     methods: {
