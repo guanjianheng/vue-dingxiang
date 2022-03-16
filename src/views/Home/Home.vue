@@ -1,7 +1,9 @@
 <template>
   <div class="home">
     <img src="../../assets/images/top.png" width="100%" alt="">
+    <!-- 病毒信息，疫情热点 -->
     <CovInfo :covDesc='covDesc' :news='news' />
+
     <div class="list">
         <div>
           <router-link to="/area">

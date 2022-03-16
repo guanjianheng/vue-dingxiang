@@ -2,7 +2,7 @@
     <div class="info">
         <div class="cov">
             <div class="title">
-                病毒信息
+                病毒信息:
               <a href="##">
             查看更多 <img src="../../../assets/images/more.png" alt=""/>
               </a>  
@@ -16,7 +16,8 @@
         </div>
         <div class="hot">
             <div class="title">
-                <img class="icon" src="../../../assets/images/hot.png"  alt="">
+                <!-- <img class="icon" src="../../../assets/images/hot.png"  alt=""> -->
+                疫情热点:
                 <a href="##">
                 查看更多 <img src="../../../assets/images/more.png" alt=""/>
                 </a> 
@@ -24,7 +25,7 @@
             <ul class="list">
                 <li v-for="item in news" :key="item.id">
                     <span>最新</span>{{ item.title }}
-                    <img src="../../../assets/images/right.png" alt="" />
+                    <!-- <img src="../../../assets/images/right.png" alt="" /> -->
                 </li>
             </ul>
         </div>
@@ -53,19 +54,21 @@ export default {
 <style lang="less" scoped>
 .info {
   padding: 0.2rem;
-      .title {
+  .title {
     margin-bottom: 0.2rem;
     font-size: 0.3rem;
     font-weight: bold;
-    color: #666;
-    a {
-      float: right;
-      font-weight: normal;
-      color: #4169e2;
-      font-size: 0.26rem;
-      img {
-        width: 0.26rem;
-      }
+        .li,.p {
+          color: #666;
+        }
+      a {
+        float: right;
+        font-weight: normal;
+        color: #4169e2;
+        font-size: 0.26rem;
+        img {
+          width: 0.26rem;
+        }
     }
   }
 
@@ -81,7 +84,7 @@ export default {
   }
   .hot {
     padding-top: 0.2rem;
-    border-bottom: 1px solid #eee;
+    // border-bottom: 1px solid #eee;
     .icon {
       width: 1.2rem;
       vertical-align: top;

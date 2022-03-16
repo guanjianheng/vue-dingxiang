@@ -1,7 +1,7 @@
 <template>
   <div class="box">
-      <h4>国外疫情地图</h4>
-      <div id="worldMain" style="width: 7.5rem; height: 6rem"></div>            
+      <h4>国外疫情地图:</h4>
+      <div id="worldMain" style="width: 7.5rem; height: 5.5rem"></div>            
   </div>
 </template>
 
@@ -36,9 +36,9 @@ h4 {
     margin-left: 9px;
     padding-left: 4px;
     margin-bottom: 5px;
-    border-bottom: 1px solid rgb(194, 188, 188);
+    // border-bottom: 1px solid rgb(194, 188, 188);
 }
-#main {
+#worldMain {
     background-color: #f5f5f5;
 }
 </style>

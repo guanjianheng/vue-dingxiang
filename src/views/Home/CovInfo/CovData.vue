@@ -1,6 +1,7 @@
 <template>
   <div class="data">
       <div class="content">
+        <h4 class="top">国内数据：</h4>
         <h4 style="font-size: 13px" class="title">截至北京时间 {{ covData.modifyTime | timeTransform}} </h4>
         <div class="data-list">
           <div class="list">
@@ -110,5 +111,11 @@ export default {
           }
       }
   }
+}
+.top {
+    border-left: 5px solid blue;
+    margin-left: 9px;
+    padding-left: 4px;
+    margin-bottom: 5px;
 }
 </style>
