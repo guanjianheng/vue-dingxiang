@@ -71,6 +71,7 @@ export default {
         }
     }
   }
+  border-bottom: 0.2rem solid #f5f5f5;
 
   .title::before {
     content: "";

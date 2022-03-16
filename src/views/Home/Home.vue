@@ -3,31 +3,8 @@
     <img src="../../assets/images/top.png" width="100%" alt="">
     <!-- 病毒信息，疫情热点 -->
     <CovInfo :covDesc='covDesc' :news='news' />
-
-    <div class="list">
-        <div>
-          <router-link to="/area">
-            <img src="../../assets/images/wen.png" width="56px" alt="">
-            <div>风险地区</div>
-          </router-link>
-        </div>
-        <div>
-          <router-link to="/hesuan">
-            <img src="../../assets/images/hesuan.png" width="56px" alt="">
-            <div>核酸检测</div>
-          </router-link>
-        </div>
-        <div>
-          <router-link to="/prevention">
-            <img src="../../assets/images/wuzi.png" width="56px" alt="">
-            <div>医疗物资</div>
-          </router-link>
-        </div>
-        <div>
-          <img src="../../assets/images/chuxing.png" width="56px" alt="">
-          <div>出行政策</div>
-        </div>
-    </div>
+    <!-- 防疫指南 -->
+    <Guide />
     <!-- 疫情数据 -->
     <CovData :covData='covData' />
     <!-- 中国地图 -->
@@ -39,6 +16,7 @@
 
 <script>
 import CovInfo from './CovInfo/CovInfo.vue'
+import Guide from '../Guide/Guide.vue'
 import CovData from './CovInfo/CovData.vue'
 import ChinaMap from './Echarts/ChinaMap.vue'
 import WorldMap from './Echarts/WorldMap.vue'
@@ -58,7 +36,8 @@ export default {
     CovInfo,
     CovData,
     ChinaMap,
-    WorldMap
+    WorldMap,
+    Guide
   },
   created() {
     api.getCovInfo()
@@ -100,20 +79,4 @@ export default {
 
 
 <style lang="less" scoped>
-.list {
-  display: flex;
-  padding-bottom: 0.2rem;
-  border-bottom: 0.2rem solid #f5f5f5;
-  border-top: 0.2rem solid #f5f5f5;
-
-   div {
-    flex: 1;
-    text-align: center;
-    color: #666;
-    img {
-      width: 0.8rem;
-      height: 0.8rem;
-    }
-  }
-}
 </style>
